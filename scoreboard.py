@@ -1,4 +1,4 @@
-import pygame.ftfont
+import pygame.sysfont
 
 
 class Scoreboard:
@@ -13,7 +13,7 @@ class Scoreboard:
 
         # Font settings for scoring information.
         self.text_color = (30, 30, 30)
-        self.font = pygame.ftfont.SysFont(None, 48)
+        self.font = pygame.sysfont.SysFont(None, 48)
 
         # Prepare the initial score image.
         self.prep_score()
@@ -31,4 +31,4 @@ class Scoreboard:
 
     def show_score(self):
         """Draw score to the screen."""
-        self.score.blit(self.score_image, self.score_rect)
+        self.screen.blit(self.score_image, self.score_rect)
